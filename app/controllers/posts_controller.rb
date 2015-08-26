@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     
     # Loop through all the posts on the forum, the main page.
     def index
-        
+        @posts = Post.all.order("created_at DESC")
     end
     
     #after pressing submit for a new post, runs the show method.
