@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   #so you can go to new, has access to :id of the post etc. Viewable by 'rake routes'.
   resources :posts
   
