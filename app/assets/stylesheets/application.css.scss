@@ -41,12 +41,16 @@ clearfix:before, .clearfix:after {
     background: white;
     #logo {
         float: left;
-        
         p {
             text-transform: uppercase;
             font-weight: 700;
             letter-spacing: -1px;
             font-size: 1.2rem;
+            a{
+               text-decoration: none; 
+               color: #397CAC;
+            }
+            
         }
     }
     
