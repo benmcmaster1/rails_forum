@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     
     #this stops people who are not signed in to go to the new post URL manually
     #it routes them to the log in page if they try
-    before_action :authenitcate_user!, except: [:index, :show]
+    before_action :authenticate_user!, except: [:index, :show]
     
     # Loop through all the posts on the forum, the main page.
     def index

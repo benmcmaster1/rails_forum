@@ -1,6 +1,9 @@
-.comment
-    %p= comment.comment
-    %p= comment.user.email
-    = link_to "Edit", edit_post_comment_path(comment.post, comment)
-    = link_to "Delete", [comment.post, comment], method: :delete, data: {confirm: "Are you sure?"}
+.comment.clearfix
+    .content
+        %p.comment_content= simple_format(comment.comment)
+        %p.comment_author= comment.user.email
+    .buttons
+        - if user_signed_in? && (comment.user_id == current_user.id)
+            = link_to "Edit", edit_post_comment_path(comment.post, comment)
+            = link_to "Delete", [comment.post, comment], method: :delete, data: {confirm: "Are you sure?"}
     
